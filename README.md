@@ -52,8 +52,8 @@ Before running the application, ensure you have Python 3 installed on your syste
 
 1.  **Clone the repository** (if you haven't already):
     ```bash
-    git clone <repository_url>
-    cd <repository_directory>
+    git clone https://github.com/KolbeWilliams/IDS-Using-ML-Algorithms-and-Neural-Networks
+    cd IDS-Using-ML-Algorithms-and-Neural-Networks
     ```
 
 2.  **Install the required Python packages** using pip:
