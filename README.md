@@ -24,6 +24,26 @@ This project implements an Intrusion Detection System (IDS) that utilizes variou
 * **Prediction Results:** A summary of the predictions on the new dataset is displayed, showing the count of predicted normal and malicious traffic samples.
 * **User-Friendly GUI:** An intuitive graphical interface built with PyQt6 makes the application easy to use for both technical and non-technical users.
 
+## Project Structure
+
+The project contains the following files:
+
+* **`Datasets/`**: This folder contains the datasets used for training and testing the models.
+* **`ML Algorithms/`**: This folder contains individual Python files for each of the implemented Machine Learning algorithms.
+* **`Neural Networks/`**: This folder contains individual Python files for each of the implemented Neural Network models.
+* `Main.py`: The main script containing the GUI implementation (`MainWindow`, `ResultsWindow`, `PredictionWindow`).
+* `algorithms.py`: This file (`algorithms.py`) contains the implementations of the different machine learning algorithms and neural network models used for botnet detection. Each algorithm class inherits from a base `Model_` class which handles preprocessing, data splitting, and evaluation. The file includes classes for:
+    * `Preprocessing`: Base class for data preprocessing.
+    * `Model_`: Base class for machine learning models, inheriting from `Preprocessing`.
+    * `GaussianNaiveBayes`
+    * `RandomForest`
+    * `KNearestNeighbors`
+    * `SupportVectorMachine`
+    * `LogisticRegression`
+    * `LSTM`
+    * `RNN`
+    * `Autoencoder`
+
 ## Prerequisites
 
 Before running the application, ensure you have Python 3 installed on your system. You will also need to install the required Python libraries.
@@ -53,7 +73,7 @@ Before running the application, ensure you have Python 3 installed on your syste
 
 1.  **Run the main application script:**
     ```bash
-    python main.py
+    python Main.py
     ```
 
 2.  **Follow the steps in the GUI:**
@@ -63,26 +83,9 @@ Before running the application, ensure you have Python 3 installed on your syste
     * **Step 4: Upload New Data for Prediction:** After a model has been successfully trained, the "Click to Upload Prediction CSV" button will be enabled. Click it to select a new CSV file (in the same format as the training data) for prediction.
     * **Step 5: Predict on New Data:** Once a prediction dataset is uploaded, the "Predict Data" button will become enabled. Click it to run the prediction using the trained model. A "Prediction Results" window will display a summary of the predicted classes (Normal or Malicious).
 
-## Project Structure
-
-The project contains the following files:
-
-* `main.py`: The main script containing the GUI implementation (`MainWindow`, `ResultsWindow`, `PredictionWindow`).
-* `algorithms.py`: This file (`algorithms.py`) contains the implementations of the different machine learning algorithms and neural network models used for botnet detection. Each algorithm class inherits from a base `Model_` class which handles preprocessing, data splitting, and evaluation. The file includes classes for:
-    * `Preprocessing`: Base class for data preprocessing.
-    * `Model_`: Base class for machine learning models, inheriting from `Preprocessing`.
-    * `GaussianNaiveBayes`
-    * `RandomForest`
-    * `KNearestNeighbors`
-    * `SupportVectorMachine`
-    * `LogisticRegression`
-    * `LSTM`
-    * `RNN`
-    * `Autoencoder`
-
 ## Dataset
 
-This project is designed to work with the **CTU-13 dataset**, a well-known dataset for botnet traffic analysis. However, it could be used with other datasets.
+This project is designed to work with the **CTU-13 dataset**, a well-known dataset for botnet traffic analysis. The dataset files are located in the `Datasets/` directory. However, the application could be used with other datasets in a compatible CSV format.
 
 ## Acknowledgements
 
